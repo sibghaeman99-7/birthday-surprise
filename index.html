@@ -1,1 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+</head>
+<body>
 
+  <!-- Screen 1: Welcome -->
+  <div id="welcome-screen" class="card">
+    <h1>🎉 Birthday Surprise! 🎉</h1>
+    <p>Apna Naam Enter Karo:</p>
+    <input type="text" id="userName" placeholder="Enter your name here..." />
+    <button onclick="startCelebration()">Start Celebration 🚀</button>
+  </div>
+
+  <!-- Screen 2: Cake & Celebration -->
+  <div id="celebration-screen" class="hidden">
+    <h1 id="greeting">Happy Birthday!</h1>
+    <p class="sub-text">Blow the candle or click to celebrate! 🎂</p>
+
+    <div class="cake-container" onclick="blowCandle()">
+      <div class="plate"></div>
+      <div class="layer layer-bottom"></div>
+      <div class="layer layer-top"></div>
+      <div class="icing"></div>
+      <div class="candle">
+        <div class="flame" id="flame"></div>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button onclick="popConfetti()">🎉 Party Poppers!</button>
+      <button onclick="toggleMusic()">🎵 Play/Pause Song</button>
+    </div>
+  </div>
+
+  <audio id="bg-music" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
